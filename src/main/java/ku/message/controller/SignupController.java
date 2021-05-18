@@ -1,5 +1,6 @@
 package ku.message.controller;
 
+import ku.message.dto.SignupDto;
 import ku.message.model.User;
 import ku.message.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class SignupController {
     }
 
     @PostMapping
-    public String signupUser(@ModelAttribute User user, Model model) {
+    public String signupUser(@ModelAttribute SignupDto user, Model model) {
         String signupError = null;
 
         if (!userService.isUsernameAvailable(user.getUsername()))
@@ -38,4 +39,5 @@ public class SignupController {
 
         return "signup";
     }
+
 }
