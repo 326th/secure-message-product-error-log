@@ -17,6 +17,7 @@ public class User {
 
     private String firstName;
     private String lastName;
+    private String role;
 
     public long getId() {
         return id;
@@ -56,5 +57,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getRole() {
+        return role;
     }
 }
